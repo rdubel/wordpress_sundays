@@ -33,5 +33,6 @@
 </footer>
 <script src="./static/external/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
 <script src="./static/js/script.js" charset=utf-8></script>
+<?php wp_footer(); ?> 
 </body>
 </html>
