@@ -22,3 +22,5 @@ function sundays_widgets_init() {
 
 }
 add_action( 'widgets_init', 'sundays_widgets_init' );
+
+add_theme_support('post_thumbnails');

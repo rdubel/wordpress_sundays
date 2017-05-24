@@ -7,35 +7,36 @@
         <?php
         $args = array(
             'category' => 3,
+            'numberposts' => -1,
             'order' => "ASC"
         );
         $posts = get_posts($args);
         foreach ($posts as $post) { ?>
 
-            <article>
-                <a href="file:///home/remy/Code/intShopSass/product.html"><img src="http://placehold.it/175.5x200" alt="imageproduit" class="img-responsive"></a>
+            <article class="catprod"><a href="<?php echo get_permalink($post->ID) ?>">
+                <img src="http://placehold.it/175.5x200" alt="imageproduit" class="img-responsive">
 
                 <?php  $cats = get_the_category($post->ID);
-                $hasSubClass = false;
-                foreach ($cats as $cat) {
-                    if ($cat->cat_ID == 4) { ?>
+                $tags = get_the_tags($post->ID);
+                foreach ($tags as $tag) {
+                    if ($tag->term_id == 7) { ?>
 
-                        <h4 class="<?php echo $cat->slug ?>"><?php echo $cat->name ?></h4>
+                        <h4 class="<?php echo $tag->slug ?>"><?php echo $tag->name ?></h4>
 
-                <?php } elseif ($cat->cat_ID == 5) { ?>
+                <?php } elseif ($tag->term_id == 9) { ?>
 
-                            <h4 class="<?php echo $cat->slug ?>"><?php echo $cat->name ?></h4>
+                            <h4 class="<?php echo $tag->slug ?>"><?php echo $tag->name ?></h4>
 
-                <?php } elseif ($cat->cat_ID == 6) { ?>
+                <?php } elseif ($tag->term_id == 8) { ?>
 
-                                <h4 class="<?php echo $cat->slug ?>"><?php echo $cat->name ?></h4>
+                                <h4 class="<?php echo $tag->slug ?>"><?php echo $tag->name ?></h4>
 
                 <?php }
                 }
                 $meta = get_post_meta($post->ID, "Price"); ?>
                             <p><?php echo $post->post_title ?></p>
                             <span><?php echo $meta[0] ?></span>
-                        </article>
+                        </a></article>
 
 
                         <?php } ?>

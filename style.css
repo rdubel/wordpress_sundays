@@ -1,16 +1,4 @@
-/*
-Theme Name: Sundays theme
-Author: uPhory
-Author URI: www.google.com
-Description: template for shop
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: sundays
-Tags: my, friggin, theme
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
+gug
 
 body {
     margin: 0;
@@ -26,7 +14,7 @@ header {
   justify-content: space-around;
   background-color: #281400;
   text-align: center;
-  height: 50em;
+  height: 45em;
 }
 header nav {
   text-align: center;
@@ -85,6 +73,7 @@ main section:not(#product) {
   flex-wrap: wrap;
 }
 main section:not(#product) article:not(#desc) {
+  text-decoration: none;
   width: 14.5%;
   text-align: left;
   border-radius: 5px;
@@ -95,6 +84,13 @@ main section:not(#product) article:not(#desc) h4 {
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
+  margin: 1em 0.5em;
+}
+main section:not(#product) article:not(#desc) p {
+    margin: 1em 0.5em;
+}
+main section:not(#product) article:not(#desc) span {
+    margin: 1em 0.5em;
 }
 main section:not(#product) article:not(#desc) .buy {
   color: #a28f61;
@@ -111,7 +107,9 @@ main section:not(#product) article:not(#desc) img {
 main section:not(#product) article:not(#desc) p {
   color: rgba(0, 0, 0, 0.8);
 }
-
+.catprod a {
+    text-decoration: none;
+}
 footer {
   display: flex;
   align-items: baseline;
